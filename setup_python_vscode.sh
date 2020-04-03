@@ -38,4 +38,4 @@ jq "$python_testing_unittest_enabled" $vs_code/$settings | sponge $vs_code/$sett
 jq "$python_testing_nosetests_enabled" $vs_code/$settings | sponge $vs_code/$settings | echo "$python_testing_nosetests_enabled"
 
 # add PYTHONPATH to venv;
-echo "export PYTHONPATH=." >> .venv/bin/activate | echo "PYTHONPATH environment variable added to '.venv/bin/activate' script"
+echo "export PYTHONPATH=." >> $2 | echo "PYTHONPATH environment variable added to $2 script"
